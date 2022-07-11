@@ -1,6 +1,12 @@
 from linkedlist import LinkedList
 from data import *
 
+def insert_genres():
+    genre_list = LinkedList()
+    for genre in genres:
+        genre_list.insert_beginning(genre)
+    return genre_list
+
 def insert_books():
     boocks = []
     book_list = LinkedList()
