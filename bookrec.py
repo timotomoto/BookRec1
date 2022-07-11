@@ -63,3 +63,7 @@ while len(selected_genre) == 0:
                         print("*")
                 sublist_head = sublist_head.get_next_node()
                 # book_list_head = book_list_head.get_next_node()
+
+            repeat_loop = str(input("\nDo you want to find other books? Enter y for yes and n for no.\n")).lower()
+            if repeat_loop == 'y':
+                selected_genre = ""
