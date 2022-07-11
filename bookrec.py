@@ -21,3 +21,6 @@ def insert_books():
         book_sublist.insert_beginning(b)
     book_list.insert_beginning(book_sublist)
     return book_list
+
+my_genre_list = insert_genres()
+my_book_list = insert_books()
