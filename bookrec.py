@@ -26,3 +26,21 @@ my_genre_list = insert_genres()
 my_book_list = insert_books()
 
 selected_genre = ""
+
+while len(selected_genre) == 0:
+    user_input = str(input(
+        "\nWhat genre would you like to read?\n"
+    )).title()
+
+    matching_types = []
+    genre_list_head = my_genre_list.get_head_node()
+    while genre_list_head is not None:
+        if genre_list_head.get_value() == user_input:
+            matching_types.append(genre_list_head.get_value())
+        genre_list_head = genre_list_head.get_next_node()
+    
+
+    if len(matching_types) == 1:
+        select_type = str(input(
+            "\nThe only matching type for the specified input is " + matching_types[0] + ". \nDo you want to look at " +
+            matching_types[0] + " books? Enter y for yes and n for no\n")).lower()
