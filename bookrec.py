@@ -24,3 +24,5 @@ def insert_books():
 
 my_genre_list = insert_genres()
 my_book_list = insert_books()
+
+selected_genre = ""
