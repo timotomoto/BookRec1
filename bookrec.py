@@ -49,7 +49,6 @@ while len(selected_genre) == 0:
             selected_genre = matching_types[0]
             print("selected_genre: " + selected_genre)
             book_list_head = my_book_list.get_head_node()
-            # while book_list_head.get_next_node() is not None:
             sublist_head = book_list_head.get_value().get_head_node()
             while sublist_head.get_next_node() is not None:
                 for g in sublist_head.get_value()[0]:
@@ -62,7 +61,6 @@ while len(selected_genre) == 0:
                         print("Year published: " + sublist_head.get_value()[4])
                         print("*")
                 sublist_head = sublist_head.get_next_node()
-                # book_list_head = book_list_head.get_next_node()
 
             repeat_loop = str(input("\nDo you want to find other books? Enter y for yes and n for no.\n")).lower()
             if repeat_loop == 'y':
